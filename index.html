@@ -233,6 +233,23 @@
     padding-bottom: 50px;
     position: relative; z-index: 1;
   }
+  /* ---- FOOTER LEGAL LINKS ---- */
+  .legal-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    margin-bottom: 16px;
+  }
+  .legal-links a {
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    transition: opacity .2s ease;
+  }
+  .legal-links a:hover { opacity: 0.6; }
+  .legal-links span { color: var(--text3); }
 
   @media (max-width: 540px) {
     .features { grid-template-columns: 1fr; }
@@ -343,7 +360,16 @@
   </section>
 
   <footer>
-    <div class="wrap">© darum · made with care on maternity leave</div>
+    <div class="wrap">
+      <nav class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span>·</span>
+        <a href="terms.html">Terms of Use</a>
+        <span>·</span>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+      <div class="copy">© darum · made with care on maternity leave</div>
+    </div>
   </footer>
   <script>
     // Email kept out of the raw HTML and assembled at runtime,
